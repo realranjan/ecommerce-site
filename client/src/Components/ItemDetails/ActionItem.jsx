@@ -34,15 +34,15 @@ const StyledButton = styled(Button)`
 const ActionItem = ({ product }) => {
     const navigate = useNavigate();
     const { id } = product;
-        
-    const [quantity, setQuantity] = useState(1);
+
+    const [quantity] = useState(1);
     const dispatch = useDispatch();
 
     const buyNow = async () => {
-        let response = await payUsingPaytm({ amount: 500, email: 'codeforinterview01@gmail.com'});
+        let response = await payUsingPaytm({ amount: 500, email: 'codeforinterview01@gmail.com' });
         var information = {
             action: 'https://securegw-stage.paytm.in/order/process',
-            params: response    
+            params: response
         }
         post(information);
     }
@@ -55,8 +55,8 @@ const ActionItem = ({ product }) => {
     return (
         <LeftContainer>
             <Image src={product.detailUrl} /><br />
-            <StyledButton onClick={() => addItemToCart()} style={{marginRight: 10, background: '#ff9f00'}} variant="contained"><Cart />Add to Cart</StyledButton>
-            <StyledButton onClick={() => buyNow()} style={{background: '#fb641b'}} variant="contained"><Flash /> Buy Now</StyledButton>
+            <StyledButton onClick={() => addItemToCart()} style={{ marginRight: 10, background: '#ff9f00' }} variant="contained"><Cart />Add to Cart</StyledButton>
+            <StyledButton onClick={() => buyNow()} style={{ background: '#fb641b' }} variant="contained"><Flash /> Buy Now</StyledButton>
         </LeftContainer>
     )
 }
