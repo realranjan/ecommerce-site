@@ -1,4 +1,4 @@
-import React,  { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import { Box, styled } from '@mui/material';
 
@@ -18,7 +18,7 @@ const Component = styled(Box)`
 
 const Home = () => {
     const getProducts = useSelector(state => state.getProducts);
-    const { products, error } = getProducts;
+    const { products } = getProducts;
 
     const dispatch = useDispatch();
 
@@ -34,28 +34,28 @@ const Home = () => {
                 <MidSlide products={products} />
                 <MidSection />
                 <Slide
-                    data={products} 
+                    data={products}
                     title='Discounts for You'
-                    timer={false} 
-                    multi={true} 
+                    timer={false}
+                    multi={true}
                 />
                 <Slide
-                    data={products} 
+                    data={products}
                     title='Suggested Items'
-                    timer={false} 
-                    multi={true} 
+                    timer={false}
+                    multi={true}
                 />
                 <Slide
-                    data={products} 
+                    data={products}
                     title='Top Selection'
-                    timer={false} 
-                    multi={true} 
+                    timer={false}
+                    multi={true}
                 />
                 <Slide
-                    data={products} 
+                    data={products}
                     title='Recommended Items'
-                    timer={false} 
-                    multi={true} 
+                    timer={false}
+                    multi={true}
                 />
             </Component>
         </>

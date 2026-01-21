@@ -1,4 +1,4 @@
-import {  Grid, styled } from '@mui/material';
+import { Grid, styled } from '@mui/material';
 
 const ImageURL = [
     'https://rukminim1.flixcart.com/flap/960/960/image/2f30db9425df5cec.jpg?q=50',
@@ -12,7 +12,7 @@ const Wrapper = styled(Grid)`
     justify-content: space-between;
 `;
 
-const Image = styled('img')(({ theme }) => ({ 
+const Image = styled('img')(({ theme }) => ({
     display: 'flex',
     marginTop: 20,
     justifyContent: 'space-between',
@@ -31,7 +31,7 @@ const MidSection = () => {
                 {
                     ImageURL.map(image => (
                         <Grid item lg={4} md={4} sm={12} xs={12}>
-                            <img src={image} style={{ width: '100%' }} />
+                            <img src={image} alt="Promotional" style={{ width: '100%' }} />
                         </Grid>
                     ))
                 }

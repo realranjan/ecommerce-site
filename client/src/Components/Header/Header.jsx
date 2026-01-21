@@ -39,8 +39,8 @@ const MenuButton = styled(IconButton)(({ theme }) => ({
     }
 }));
 
-const CustomButtonWrapper = styled('span')(({ theme }) => ({ 
-    margin: '0 5% 0 auto', 
+const CustomButtonWrapper = styled('span')(({ theme }) => ({
+    margin: '0 5% 0 auto',
     [theme.breakpoints.down('sm')]: {
         display: 'none'
     }
@@ -86,10 +86,10 @@ const Header = () => {
                 </Drawer>
 
                 <Component to='/'>
-                    <img src={logoURL} style={{ width: 75 }} />
+                    <img src={logoURL} alt="Flipkart" style={{ width: 75 }} />
                     <Box component="span" style={{ display: 'flex' }}>
                         <SubHeading>Explore&nbsp;
-                            <Box component="span" style={{color:'#FFE500'}}>
+                            <Box component="span" style={{ color: '#FFE500' }}>
                                 Plus
                             </Box>
                         </SubHeading>
